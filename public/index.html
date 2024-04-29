@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link href="./output.css" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<title>Chat app</title>
+	</head>
+	<body class="bg-slate-100 flex flex-col items-center">
+		<h1 class="text-6xl">ChatApp</h1>
+
+		<div
+			class="main mt-24 w-[22rem] flex flex-col justify-between h-[40rem] border-2 border-black"
+		>
+			<div
+				class="name flex justify-center h-[10%] p-2 w-full border-2 border-black"
+			>
+				<i class="fa-solid fa-user mx-2 mt-1"></i>
+				<input
+					type="text"
+					id="sender"
+					value="Anonymous"
+					class="border-2 border-black"
+				/>
+			</div>
+
+			<div
+				class="w-full border-2 pb-10 scroll-smooth border-black h-[80%] overflow-y-scroll no-scrollbar"
+				id="messageContainerMain"
+			>
+				<div id="messageContainer"></div>
+				<div id="feedback" class="text-center italic"></div>
+			</div>
+
+			<form
+				class="flex items-center justify-around w-full h-[10%] bg-gray-300"
+				id="messageForm"
+			>
+				<input
+					type="text"
+					name=""
+					id="chatInput"
+					class="border-2 border-black"
+				/><button
+					class="border-2 border-black px-2 font-bold bg-gray-200 text-black"
+					type="submit"
+				>
+					Send
+				</button>
+			</form>
+		</div>
+
+		<div>
+			Total Clients :
+			<span id="totalClients"></span>
+		</div>
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="main.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js"
+			integrity="sha512-4F1cxYdMiAW98oomSLaygEwmCnIP38pb4Kx70yQYqRwLVCs3DbRumfBq82T08g/4LJ/smbFGFpmeFlQgoDccgg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+	</body>
+</html>

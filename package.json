@@ -1,0 +1,24 @@
+{
+	"name": "chatapp_websockets",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start": "node app.js",
+		"dev": "nodemon app.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"express": "^4.19.2",
+		"moment": "^2.30.1",
+		"nodemon": "^3.1.0",
+		"socket.io": "^4.7.5",
+		"socket.io-circular-parser": "^3.1.2-patch1",
+		"socketio": "^1.0.0"
+	},
+	"devDependencies": {
+		"tailwindcss": "^3.4.3"
+	}
+}
